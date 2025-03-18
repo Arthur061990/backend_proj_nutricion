@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/Arthur061990/backend_proj_nutricion#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.21.2"
   }
 }
