@@ -1,11 +1,12 @@
 const express = require('express');
 const router = express.Router()
-const api_reservas_Controller = require('../controllers/api_registro');
+const verifyToken = require('../middleware/auth');
+const api_reservas_Controller = require('../controllers/signup');
 
 /*
     Endpoint Registro
 */
-    router.get("/api/registro", api_reservas_Controller.nuevoUsuario);
+    router.post("/registro", api_reservas_Controller.nuevoUsuario);
 
 
 
