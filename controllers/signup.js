@@ -21,7 +21,8 @@ async function nuevoUsuario (req, res) {
     const data = {
         username: req.body.username,
         email: req.body.email,
-        password: hashedPassword 
+        password: hashedPassword,
+        salt
     };
 
     try {
@@ -36,6 +37,7 @@ async function nuevoUsuario (req, res) {
             res.send('¡¡ Usuario Registrado Correctamente !!');
         }
     } catch (error) {
+        console.error(error.message)
         res.status(500).send('Error registering user.');
     }
 };
